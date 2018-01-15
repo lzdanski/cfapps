@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2016, 2017
-
+  years: 2016, 2017, 2018
 lastupdated: "2016-09-06"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+
 
 # Monitoring and Logging Cloud Foundry apps
 {: #monitoring_logging_cloud_foundry_apps}

@@ -21,7 +21,7 @@ per sviluppare, tracciare, pianificare e distribuire la tua applicazione.
 {:shortdesc}
 
 Quando crei un'applicazione in {{site.data.keyword.Bluemix_notm}},
-inizi con uno starter. Uno *starter* è un template che include
+inizi con uno starter. Uno *starter* è un modello che include
 dei servizi predefiniti e del codice applicativo configurato con uno
 specifico pacchetto di build. Ci sono due tipi di starter: contenitori tipo e runtime.
 

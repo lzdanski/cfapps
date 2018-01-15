@@ -1,13 +1,11 @@
 ---
 
 
-
 copyright:
 
-  years: 2015，2017
+  years: 2015, 2017
 
-lastupdated: "2016-03-15"
-
+lastupdated: "2015-12-15"
 
 
 ---
@@ -19,8 +17,9 @@ lastupdated: "2016-03-15"
 {:pre: .pre}
 
 # Utilización de compilación de la comunidad
+{: #using_buildpacks}
 
-Si no encuentra ningún iniciador en el Catálogo de {{site.data.keyword.Bluemix}} que proporcione
+Si no encuentra ningún iniciador en el catálogo de {{site.data.keyword.Bluemix}} que proporcione
 el tiempo de ejecución que desea, puede incorporar un paquete de compilación externo
 a {{site.data.keyword.Bluemix_notm}}. Puede especificar un paquete de compilación personalizado compatible con Cloud Foundry cuando
 despliegue la app mediante el mandato cf push.
@@ -30,12 +29,12 @@ La comunidad de Cloud Foundry proporciona paquetes de compilación externos que 
 app en {{site.data.keyword.Bluemix_notm}},
 asegúrese de instalar la interfaz de línea de mandatos cf.
 
-**Nota:** Los paquetes de compilación externos no los proporciona IBM; por lo tanto, es posible que necesite ponerse en contacto con la comunidad de Cloud Foundry para obtener soporte técnico.
+**Nota:** los paquetes de compilación externos no los proporciona IBM. Póngase en contacto con la comunidad de Cloud Foundry para obtener ayuda.
 
 ## Paquetes de compilación de la comunidad incorporados
 
 En {{site.data.keyword.Bluemix_notm}},
-puede utilizar paquetes de compilación incorporados que ofrece la comunidad de Cloud Foundry. Para ver los paquetes de compilación incorporados de la comunidad, ejecute el mandato cf buildpacks:
+puede utilizar paquetes de compilación incorporados que ofrece la comunidad de Cloud Foundry. Para ver los paquetes de compilación incorporados de la comunidad, ejecute el mandato `cf buildpacks`:
 
 ```
 cf buildpacks
@@ -49,40 +48,46 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 ```
 {:screen}
 
-<ul>
 
-<li>
 Para el mismo tiempo de ejecución o infraestructura, los paquetes de compilación de IBM
 prevalecen sobre los de la comunidad. Si desea que el paquete de compilación de la comunidad prevalezca sobre el que ha creado IBM, debe especificar el paquete de compilación
 con la opción -b del mandato cf push.
-<p>Por ejemplo, puede utilizar el paquete de compilación de la comunidad para apps web Java™:</p>
-<pre class="pre"><code>cf push app_name -b java_buildpack -p app_path</code></pre>
-<p>También puede utilizar el paquete de compilación de la comunidad para apps Node.js:</p>
-<pre class="pre"><code>cf push app_name -b nodejs_buildpack -p app_path</code></pre>
-</li>
+Por ejemplo, puede utilizar el paquete de compilación de la comunidad para apps web Java™:
 
-<li>
-<p>Para un tiempo de ejecución o infraestructura que no reciba soporte de los paquetes de compilación creados por IBM pero sí de los integrados de la comunidad, no tiene que utilizar la opción -b con el mandato cf push.</p><p>Por ejemplo, para apps Ruby, no hay paquetes de compilación creados por IBM. Puede utilizar el paquete de compilación integrado de la comunidad especificando
-el mandato siguiente:</p>
-<pre class="pre"><code>cf push app_name -p app_path</code></pre>
-</li>
-</ul>
+```
+cf push app_name -b java_buildpack -p app_path
+```
+{:pre}
+
+También puede utilizar el paquete de compilación de la comunidad para apps Node.js:
+
+```
+cf push app_name -b nodejs_buildpack -p app_path
+```
+{:pre}
+
+Para un tiempo de ejecución o infraestructura que no reciba soporte de los paquetes de compilación creados por IBM pero sí de los integrados de la comunidad, no tiene que utilizar la opción -b con el mandato cf push.</p><p>Por ejemplo, para apps Ruby, no hay paquetes de compilación creados por IBM. Puede utilizar el paquete de compilación integrado de la comunidad especificando
+el mandato siguiente:
+
+```
+cf push app_name -p app_path
+```
+{:pre}
 
 ## Paquetes de compilación externos
 
 Puede utilizar paquetes de compilación externos o personalizados en {{site.data.keyword.Bluemix_notm}}. Debe especificar el URL del paquete de compilación con la opción -b, así como la pila con la opción `-s` en el mandato **cf push**. Por ejemplo, para utilizar un paquete de compilación de la comunidad externo para archivos estáticos, ejecute el siguiente mandato:
 
 ```
-cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/cloudfoundry/staticfile-buildpack.git
 ```
 {:pre}
 
-Otro ejemplo
-es que si no desea utilizar el paquete de compilación de comunidad incorporado
-para apps Ruby, puede ver un paquete de compilación externo especificando el mandato siguiente:
+Si no desea utilizar el paquete de compilación de comunidad incorporado para apps Ruby,
+puede utilizar un paquete de compilación externo especificando el mandato siguiente:
 
 ```
-cf push app_name -p app_path -b https://github.com/cloudfoundry/heroku-buildpack-ruby -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/cloudfoundry/ruby-buildpack.git
 ```
 {:pre}
 
@@ -92,7 +97,7 @@ en Bluemix, especifique el mandato siguiente para especificar el URL del reposit
 paquete de compilación:
 
 ```
-cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/cloudfoundry/php-buildpack.git
 ```
 {:pre}
 

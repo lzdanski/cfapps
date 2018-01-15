@@ -2,13 +2,14 @@
 
 copyright:
   years: 2016, 2017
-
 lastupdated: "2016-09-06"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+
 
 # Cloud Foundry 앱 모니터링 및 로깅
 {: #monitoring_logging_cloud_foundry_apps}

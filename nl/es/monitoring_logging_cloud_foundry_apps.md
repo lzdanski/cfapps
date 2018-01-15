@@ -2,13 +2,14 @@
 
 copyright:
   years: 2016, 2017
-
 lastupdated: "2016-09-06"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+
 
 # Supervisión y creación de registros de apps de Cloud Foundry
 {: #monitoring_logging_cloud_foundry_apps}

@@ -2,13 +2,14 @@
 
 copyright:
   years: 2016, 2017
-
 lastupdated: "2016-09-06"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+
 
 # Überwachung und Protokollierung für Cloud Foundry-Apps
 {: #monitoring_logging_cloud_foundry_apps}

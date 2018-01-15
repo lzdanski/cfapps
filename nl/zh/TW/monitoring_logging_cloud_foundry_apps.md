@@ -2,13 +2,14 @@
 
 copyright:
   years: 2016, 2017
-
 lastupdated: "2016-09-06"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+
 
 # 監視及記載 Cloud Foundry 應用程式
 {: #monitoring_logging_cloud_foundry_apps}

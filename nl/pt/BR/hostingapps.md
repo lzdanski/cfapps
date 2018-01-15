@@ -150,7 +150,10 @@ Execute as etapas a seguir para migrar seu aplicativo.
 </li></ol>
 </li>
 
-<li>Opcional: se você mudar seu aplicativo, deverá fazer upload dessas mudanças inserindo o comando cf push novamente. A interface da linha de comandos cf usa as opções anteriores e as respostas aos prompts, para atualizar todas as instâncias em execução de seu aplicativo com os novos bits de código.</li>
+<li>Opcional: se você mudar seu aplicativo, deverá fazer upload dessas mudanças inserindo o comando cf push novamente. A
+interface da linha de comandos cf usa as opções anteriores e as respostas
+aos prompts, para atualizar todas as instâncias em execução de seu aplicativo
+com os novos bits de código.</li>
 </ol>
 
 **Notas:**
